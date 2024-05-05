@@ -6,7 +6,7 @@ from pandas.plotting import autocorrelation_plot as auto_corr
 
 # To plot
 import matplotlib.pyplot as plt
-%matplotlib inline
+#%matplotlib inline
 import matplotlib as mpl
 import seaborn as sns
 
