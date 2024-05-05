@@ -97,17 +97,17 @@ print('\n\033[1mInference:\033[0m The Datset has {} numerical & {} categorical f
 
 display(df.describe())
 
-Inference: The stats seem to be fine, let us do further analysis on the Dataset
+#Inference: The stats seem to be fine, let us do further analysis on the Dataset
 
 df.head() # last ready data set
 
 df.shape
 
-Store & Department Numbers
+#Store & Department Numbers
 
 df['store'].nunique() # number of different values
 
-Now, I will look at the average weekly sales for each store to see if there is any weird values or not. There are 45 stores for stores.
+#Now, I will look at the average weekly sales for each store to see if there is any weird values or not. There are 45 stores for stores.
 
 store_dept_table = pd.pivot_table(df, index='store',
                                   values='weekly_sales', aggfunc=np.mean)
@@ -117,7 +117,7 @@ df = df.loc[df['weekly_sales'] > 0]
 
 df.shape # new data shape
 
-Check for columns
+#Check for columns
 
 print(df.columns.to_list())
 
