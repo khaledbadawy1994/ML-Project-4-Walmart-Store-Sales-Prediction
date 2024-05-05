@@ -127,7 +127,7 @@ df[['store', 'weekly_sales', 'holiday_flag', 'temperature', 'fuel_price']].nlarg
 
 #Store 14 has the most weekly_sales, while store 20,10,13,4 have are in top 10 twice
 
-Convert the numerical columns to categorical
+#Convert the numerical columns to categorical
 
 df['holiday_flag'] = pd.Categorical(df.holiday_flag)
 
@@ -189,9 +189,9 @@ print(f"\nNumerical Features:\n{numericalData}")
 categoricalData = df.select_dtypes(include = ['object']).columns
 print(f"\nCategorical Features:\n{categoricalData}")
 
-Treatment Of Outliers In Dataset df
+#Treatment Of Outliers In Dataset df
 
-Checking Outliers
+#Checking Outliers
 
 #checking outliers with the help of Boxplot
 
