@@ -484,7 +484,7 @@ ave_sales_2=pd.DataFrame(average_store_sales)
 
 (ave_sales_2.loc[33][0]/ave_sales_2.loc[20][0])*100
 
-Lowest performing store's sales only accounts for 12% of sales done by top performing store on average.
+#Lowest performing store's sales only accounts for 12% of sales done by top performing store on average.
 
 plt.figure(figsize=[8,4])
 sns.distplot(df['weekly_sales'], color='g',hist_kws=dict(edgecolor="black", linewidth=2), bins=30)
