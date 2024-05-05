@@ -1287,7 +1287,7 @@ plt.show()
 # histograms
 df.hist(figsize=(30,20));
 
-Fuel Price, CPI , Unemployment , Temperature Effects
+#Fuel Price, CPI , Unemployment , Temperature Effects
 
 fuel_price = pd.pivot_table(df, values = "weekly_sales", index= "fuel_price")
 fuel_price.plot()
@@ -1301,14 +1301,14 @@ CPI.plot()
 unemployment = pd.pivot_table(df, values = "weekly_sales", index= "unemployment")
 unemployment.plot()
 
-From graphs, it is seen that there are no significant patterns between CPI, temperature, unemployment rate, fuel price vs weekly sales. There is no data for CPI between 140-180 also.
+#From graphs, it is seen that there are no significant patterns between CPI, temperature, unemployment rate, fuel price vs weekly sales. There is no data for CPI between 140-180 also.
 
 plt.figure(figsize=[10,4])
 sns.distplot(df[target], color='b',hist_kws=dict(edgecolor="black", linewidth=2), bins=30)
 plt.title('weekly_sales')
 plt.show()
 
-*numerical *
+#*numerical *
 
 print('\033[1mNumeric Features Distribution'.center(130))
 
@@ -1374,34 +1374,34 @@ df.groupby('store')['weekly_sales'].count().reset_index()
 
 df.groupby('store')['weekly_sales'].sum().max()
 
-Which store had the highest weekly sales in 2010?
+#Which store had the highest weekly sales in 2010?
 
 df2010 = df[df.year==2010]
 df2010[df2010.weekly_sales == df2010.weekly_sales.max()]
 
-Which store had the highest weekly sales in 2011?
+#Which store had the highest weekly sales in 2011?
 
 df2011 = df[df.year==2011]
 df2011[df2011.weekly_sales == df2011.weekly_sales.max()]
 
-Which store had the highest weekly sales in 2012?
+#Which store had the highest weekly sales in 2012?
 
 df2012 = df[df.year==2012]
 df2012[df2012.weekly_sales == df2012.weekly_sales.max()]
 
-Which store had the lowest weekly sales in 2010?
+#Which store had the lowest weekly sales in 2010?
 
 df2010[df2010.weekly_sales == df2010.weekly_sales.min()]
 
-Which store had the lowest weekly sales in 2011?
+#Which store had the lowest weekly sales in 2011?
 
 df2011[df2011.weekly_sales == df2011.weekly_sales.min()]
 
-Which store had the lowest weekly sales in 2012?
+#Which store had the lowest weekly sales in 2012?
 
 df2012[df2012.weekly_sales == df2012.weekly_sales.min()]
 
-monthly Sales by Year
+#monthly Sales by Year
 
 df2010.groupby('month')["weekly_sales"].mean().plot(linewidth=2,style='--o').set_title('Weekly Sales by 2010')
 
