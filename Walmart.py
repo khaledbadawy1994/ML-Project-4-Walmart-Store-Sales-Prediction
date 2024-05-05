@@ -1409,11 +1409,11 @@ df2011.groupby('month')['weekly_sales'].mean().plot(linewidth=2,style='--o').set
 
 df2012.groupby('month')['weekly_sales'].mean().plot(linewidth=2,style='--o').set_title('Weekly Sales by 2012')
 
-Conclusion
+#Conclusion
 
-The Temperature affects on the weekly sales where the customers are likly to go shopping more in cold weather specially in winter. The Unemployment rate took negative scale which affect badly on the weekly sales as there is no more employee to serve them. The fuel price affects by negative on the sales as by increasing the fuel price the products' price will increase which affect on the sales rate. The year 2011 was the richest year as the stores reached the maximum rate of weekly sales in it.
+#The Temperature affects on the weekly sales where the customers are likly to go shopping more in cold weather specially in winter. The Unemployment rate took negative scale which affect badly on the weekly sales as there is no more employee to serve them. The fuel price affects by negative on the sales as by increasing the fuel price the products' price will increase which affect on the sales rate. The year 2011 was the richest year as the stores reached the maximum rate of weekly sales in it.
 
-The year 2010 was the year with the highest revenues, followed by 2011. The stores with the highest revenues are number 14, 20 and 4. In general, holidays have the highest revenues. There are lower revenues when the temperature is low and higher revenues when the temperature is high. There are higher revenues when the CPI is low. The issue of rising fuel prices does not seem to affect store revenues.
+#The year 2010 was the year with the highest revenues, followed by 2011. The stores with the highest revenues are number 14, 20 and 4. In general, holidays have the highest revenues. There are lower revenues when the temperature is low and higher revenues when the temperature is high. There are higher revenues when the CPI is low. The issue of rising fuel prices does not seem to affect store revenues.
 
 df
 
@@ -1424,8 +1424,7 @@ df.head
 
 df
 
-Next steps:
-Splitting Data into Features(X) And Target(Y)
+#Splitting Data into Features(X) And Target(Y)
 
 # Creating the target and the data separation
 
@@ -1442,11 +1441,11 @@ Splitting into train test
 # Creating the test-train split
 
 x_train, x_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=50)
-Model Training and Evaluation
+#Model Training and Evaluation
 
-Implementing Models
+#Implementing Models
 
-Model Used : Linear Regression
+#Model Used : Linear Regression
 
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
@@ -1471,9 +1470,9 @@ print('RMSE',rmse)
 
 r2_score(y_test,y_predict)
 
-Inference : Linear regression is not able to explain the variance of the data because the r2_score achieved is very less
+#Inference : Linear regression is not able to explain the variance of the data because the r2_score achieved is very less
 
-Model Used : Decision Tree Regressor
+#Model Used : Decision Tree Regressor
 
 # importing the model
 
@@ -1491,9 +1490,9 @@ print("Mean squared error: ", mse)
 
 print(r2_score(y_test,y_predict))
 
-Inference 2 : Decision Tree regressor is better than the Linear Regression in terms of the fit as the r2_score for the DTR is better than LR
+#Inference 2 : Decision Tree regressor is better than the Linear Regression in terms of the fit as the r2_score for the DTR is better than LR
 
-Model Used : Random Forest
+#Model Used : Random Forest
 
 # importing the model
 
@@ -1510,9 +1509,9 @@ r2 = r2_score(y_test, y_pred)
 print("Mean squared error: ", mse)
 print("R2 score: ", r2)
 
-Inference : Random Forest Regressor is the best fitting model for the given dataset and it was able to nearly accurate about fitting the data.
+#Inference : Random Forest Regressor is the best fitting model for the given dataset and it was able to nearly accurate about fitting the data.
 
-** Lasso , Ridge Regression and elastic net**
+#** Lasso , Ridge Regression and elastic net**
 
 from sklearn.linear_model import LassoCV , RidgeCV,ElasticNetCV
 lcv = LassoCV(cv = 4)
@@ -1542,7 +1541,7 @@ r2_score(y_test,y_pred)
 print(Y_pred)
 print("R2 Score is ",r2_score(y_test,y_pred))
 
-Implementing KNeighbours and SVR
+#Implementing KNeighbours and SVR
 
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.naive_bayes import GaussianNB
@@ -1618,7 +1617,7 @@ l = (LinearRegression,RandomForestRegressor,Lasso,Ridge,ElasticNet,DecisionTreeR
 for i in l:
     re = pred_model(i, x_train,y_train,x_test,y_test)
 
-Training with 70:30 Ratio
+#Training with 70:30 Ratio
 
 df2 = pd.DataFrame(columns=["Model", "Accuracy for train","MSE for train","MAE for train","Accuracy for test","MSE for test","MAE for test"])
 
@@ -1668,7 +1667,7 @@ l = (LinearRegression,RandomForestRegressor,Lasso,Ridge,ElasticNet,DecisionTreeR
 for i in l:
     re1 = pred_model1(i, x_train,y_train,x_test,y_test)
 
-Training with 60:40 Ratio
+#Training with 60:40 Ratio
 
 df3 = pd.DataFrame(columns=["Model", "Accuracy for train","MSE for train","MAE for train","Accuracy for test","MSE for test","MAE for test"])
 
@@ -1717,9 +1716,9 @@ def pred_model2(model,x_train,y_train,x_test,y_test):
 for i in l:
     re2 = pred_model2(i, x_train,y_train,x_test,y_test)
 
-After comparing all the models with different test ratios, we get that 'RandomForest' with 80:20 ratio is giving us the best model with 96.8 accuracy. So now we will try to improve it's accuracy further by tuning it's parameters
+#After comparing all the models with different test ratios, we get that 'RandomForest' with 80:20 ratio is giving us the best model with 96.8 accuracy. So now we will try to improve it's accuracy further by tuning it's parameters
 
-Hyperparameter tuning
+#Hyperparameter tuning
 
 n_estimators = [5,20,50,100]
 max_features = ['auto', 'sqrt']
@@ -1780,12 +1779,12 @@ plt.scatter(y_test,(y_test-y_pred),color = "green",label = 'Testing Predictions'
 plt.legend()
 plt.show()
 
-So, our accuracy has improved slightly after hyperparameter tuning from 95.3 to 95.5 Hence, we will take this as our final model for further prediction
+#So, our accuracy has improved slightly after hyperparameter tuning from 95.3 to 95.5 Hence, we will take this as our final model for further prediction
 
-Conclusion
+#Conclusion
 
-So our dataset was labelled and our problem statement was of prediction, hence we have used different supervised learning algorithms used for prediction.
+#So our dataset was labelled and our problem statement was of prediction, hence we have used different supervised learning algorithms used for prediction.
 
-All the algorithms used in this project are :
+#All the algorithms used in this project are :
 
-Linear Regression Linear Regression : Lasso Linear Regression : Ridge Linear Regression : ELasticNet Decision Tree Random Forest Also we have used three different train-test ratio for training our model. And the best model that we obtained was 'RandomForest' with 60:40 ratio and with 95.3 accuracy. Also after tuning our model our accuracy further improved from 95.3 to 95.5.
+#Linear Regression Linear Regression : Lasso Linear Regression : Ridge Linear Regression : ELasticNet Decision Tree Random Forest Also we have used three different train-test ratio for training our model. And the best model that we obtained was 'RandomForest' with 60:40 ratio and with 95.3 accuracy. Also after tuning our model our accuracy further improved from 95.3 to 95.5.
