@@ -713,9 +713,9 @@ plt.legend(loc = 'best')
 plt.tight_layout()
 plt.show()
 
-Store 14 has the maximum standard deviation #2
+#Store 14 has the maximum standard deviation #2
 
-Some holidays have a negative impact on sales. Find out holidays that have higher sales than the mean sales in the non-holiday season for all stores together¶
+#Some holidays have a negative impact on sales. Find out holidays that have higher sales than the mean sales in the non-holiday season for all stores together¶
 
 mean_sales_non_holiday = df[(df['holiday_flag'] == 0)]['weekly_sales'].mean()
 print(mean_sales_non_holiday)
