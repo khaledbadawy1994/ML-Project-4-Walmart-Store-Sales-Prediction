@@ -727,11 +727,11 @@ fig, ax = plt.subplots(figsize=[8,6])
 sns.barplot(data = df, x = df['holiday_flag'], y = df['weekly_sales'])
 ax.set_title("holiday Vs. Weekly_Sales", fontsize = 16);
 
-We conclude that the weekly sales increases when it's holiday
+#We conclude that the weekly sales increases when it's holiday
 
-Temperature Vs. Weekly_Sales
+#Temperature Vs. Weekly_Sales
 
-Temperature in Categories
+#Temperature in Categories
 
 bins=[-2.06,20,40,60,80,100.14]
 labels =['< 20','From 20 To 40','From 40 To 60','From 60 To 80','> 80']
@@ -749,9 +749,9 @@ ax.pie(x = temp.value_counts(), autopct = "%.1f%%", explode = [0.05]*5,
 ax.set_title("Temp in Fahrenhite", fontsize = 16);
 plt.show()
 
-from the above chart we conclude that the most common / repeated degree is between 60 and 80 C
+#from the above chart we conclude that the most common / repeated degree is between 60 and 80 C
 
-Temp in F Vs. Weekly_Sales
+#Temp in F Vs. Weekly_Sales
 
 fig, ax = plt.subplots(figsize=(10,5))
 x = temp
@@ -759,13 +759,13 @@ y = df['weekly_sales']
 sns.stripplot(data = df , x = "temperature category", y = "weekly_sales", ax = ax)
 ax.set_title("Temp in F Vs. Weekly_Sales", fontsize = 16);
 
-From the above Chart we can conclude that :
+#From the above Chart we can conclude that :
 
-the Sales was at it's top when the temperature ranges between 20 F and 60 F the lowest Sales scored when the temperature is less than 20 F
+#the Sales was at it's top when the temperature ranges between 20 F and 60 F the lowest Sales scored when the temperature is less than 20 F
 
-CPI Vs. Weekly_Sales
+#CPI Vs. Weekly_Sales
 
-CPI(Prevailing Consumer Price Index)
+#CPI(Prevailing Consumer Price Index)
 
 CPI = df['cpi']
 
@@ -779,23 +779,23 @@ CPI = df[["cpi"]]
 CPI.boxplot()
 plt.show()
 
-From the above the plot we can conclude :
+#From the above the plot we can conclude :
 
-The Min CPI scored is approximately 125 The Max CPI scored is approximately 225 The Mean CPI scored is approximately 185
+#The Min CPI scored is approximately 125 The Max CPI scored is approximately 225 The Mean CPI scored is approximately 185
 
-The relation between CPI Vs. Weekly Sales
+#The relation between CPI Vs. Weekly Sales
 
 plt.figure(figsize=(8,6))
 sns.scatterplot(x = df["cpi"], y = df["weekly_sales"])
 plt.show()
 
-From the above plot we can conclude that :
+#From the above plot we can conclude that :
 
-The Majority of sales have a CPI greater than 180 , In other words Most of the sales have a CPI greater than the mean which is 185
+#The Majority of sales have a CPI greater than 180 , In other words Most of the sales have a CPI greater than the mean which is 185
 
-Fuel price Vs. Weekly_Sales:
+#Fuel price Vs. Weekly_Sales:
 
-Fuel Price
+#Fuel Price
 
 bins=[2.472,3.5,4.468]
 labels =['From 2.4 to 3.5','From 3.5 To 4.4']
@@ -814,11 +814,11 @@ fuel2 = df[["fuel_price"]]
 fuel2.boxplot()
 plt.show()
 
-From the above plot we can conclude that:
+#From the above plot we can conclude that:
 
-The lowest fuel price scored is approximately 2.4 The highest fuel price scored is approximately 4.4 The mean fuel price scored is approximately 3.4
+#The lowest fuel price scored is approximately 2.4 The highest fuel price scored is approximately 4.4 The mean fuel price scored is approximately 3.4
 
-The relation between Fuel Price and Weekly Sales
+#The relation between Fuel Price and Weekly Sales
 
 fig, ax = plt.subplots(figsize=(10,5))
 x = fuel1
@@ -826,27 +826,27 @@ y = df['weekly_sales']
 sns.stripplot(data = df , x = "fuelpricecategory", y = "weekly_sales", ax = ax)
 ax.set_title("Fuel_Price Vs. Weekly_Sales", fontsize = 16);
 
-From the above plot we can conclude that:
+#From the above plot we can conclude that:
 
-The Sales was at it's top when the fuel price was less than 3.5 We can say that the highest sales is when the fuel price is less than the mean which is 2.4 The highest fuel price, The lowest sales.
+#The Sales was at it's top when the fuel price was less than 3.5 We can say that the highest sales is when the fuel price is less than the mean which is 2.4 The highest fuel price, The lowest sales.
 
-4- Unemployment Vs. Weekly_Sales: (Prevailing unemployment rate)
+#4- Unemployment Vs. Weekly_Sales: (Prevailing unemployment rate)
 
-Unemployment
+#Unemployment
 
 sns.set(style="darkgrid")
 sns.relplot(x="unemployment", y="weekly_sales", data=df);
 
-From the above the plot we can conclude :
+#From the above the plot we can conclude :
 
-The majority of sales has an Unemployment rate between 5 and 10. the highest Unemployment rate, The lowest sales. So we now will filter this data
+#The majority of sales has an Unemployment rate between 5 and 10. the highest Unemployment rate, The lowest sales. So we now will filter this data
 
 sns.set(style = "darkgrid")
 sns.lineplot(x = empo1, y = "weekly_sales", data = df);
 
-From the above the plot we can conclude:
+#From the above the plot we can conclude:
 
-The unemployment takes negative scale which affect on the weekly sales
+#The unemployment takes negative scale which affect on the weekly sales
 
 columns = ['weekly_sales', 'temperature', 'fuel_price', 'unemployment', 'cpi']
 plt.figure(figsize=(18, 20))
@@ -855,9 +855,9 @@ for i,col in enumerate(columns):
     sns.histplot(data = df, x = col, kde = True, bins = 15, color = 'r')
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-The distribution of Weekly_Sales is right skewed, this is normal because the weekly sales may be high in some time. Temperature and Unemployment have normal distribution. CPI and Fuel_Price have bimodal distribution.
+#The distribution of Weekly_Sales is right skewed, this is normal because the weekly sales may be high in some time. Temperature and Unemployment have normal distribution. CPI and Fuel_Price have bimodal distribution.
 
 fig, ax = plt.subplots(1, 2, figsize = (14, 6))
 sns.countplot(data = df, x = 'holiday_flag', ax = ax[0])
@@ -868,11 +868,11 @@ ax[1].pie(df['holiday_flag'].value_counts().values,
 
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-Days of no holiday are the most frequent than days of holiday in the dataset with a percentage of 93 % and this is normal.
+#Days of no holiday are the most frequent than days of holiday in the dataset with a percentage of 93 % and this is normal.
 
-. year
+# year
 
 df['year'].value_counts()
 
@@ -883,11 +883,11 @@ ax[1].pie(df['year'].value_counts().values,
           autopct = '%1.1f%%')
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-2011 is the most frequent in the dataset because most of the weekly sales were recorded during this year.
+#2011 is the most frequent in the dataset because most of the weekly sales were recorded during this year.
 
-Months
+#Months
 
 df['month'].value_counts()
 
@@ -896,11 +896,11 @@ sns.countplot(data = df, x = 'month')
 plt.xlabel('month')
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-April and July are the most frequent in the dataset because most of the weekly sales were recorded in these months.
+#April and July are the most frequent in the dataset because most of the weekly sales were recorded in these months.
 
-weekly_sales & is_holiday
+#weekly_sales & is_holiday
 
 df.groupby('holiday_flag')['weekly_sales'].mean()
 
@@ -917,9 +917,9 @@ plt.xlabel('Holiday_Flag', size = 12)
 plt.ylabel('Weekly_Sales', size = 12)
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-The rate of sales on holidays is higher than on other days.
+#The rate of sales on holidays is higher than on other days.
 
 df.groupby('holiday_flag')['weekly_sales'].sum()
 
@@ -936,11 +936,11 @@ plt.xlabel('Is Holiday', size = 12)
 plt.ylabel('Total Sales', size = 12)
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-Total sales on holidays are lower than on other days, which is normal because the number of holidays is very small compared with the number of other days.
+#Total sales on holidays are lower than on other days, which is normal because the number of holidays is very small compared with the number of other days.
 
-weekly_sales & store
+#weekly_sales & store
 
 gb_store = df.groupby('store')['weekly_sales'].sum().sort_values(ascending = False)
 gb_store
@@ -958,11 +958,11 @@ plt.xlabel('Store', size = 15)
 plt.ylabel('Total Sales', size = 15)
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-There is a high variance in weekly sales from one store to another. Store No. 20 has the highest sales from any store with 301,397,792 followed by Store No. 4 with 299,543,953 and Store No. 33 comes last with 37,160,222$.
+#There is a high variance in weekly sales from one store to another. Store No. 20 has the highest sales from any store with 301,397,792 followed by Store No. 4 with 299,543,953 and Store No. 33 comes last with 37,160,222$.
 
-weekly_sales & temperature
+#weekly_sales & temperature
 
 plt.figure(figsize = (14, 5))
 sns.scatterplot(data = df,
@@ -976,11 +976,11 @@ plt.xlabel('Temperature', size = 15)
 plt.ylabel('Sales', size = 15)
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-Sales are not affected by changes in temperature.
+#Sales are not affected by changes in temperature.
 
-weekly_sales & cpi
+#weekly_sales & cpi
 
 plt.figure(figsize = (14, 5))
 sns.scatterplot(data = df,
@@ -995,11 +995,11 @@ plt.xlabel('CPI', size = 15)
 plt.ylabel('Sales', size = 15)
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-Consumer Price Index (CPI) does not affect sales. And based on the distribution of average consumer prices in the above figure, customers can be divided into two categories: customers who pay from 120 to 150 (Middle-class customers). customers who pay from 180 to 230 (High-class customers).
+#Consumer Price Index (CPI) does not affect sales. And based on the distribution of average consumer prices in the above figure, customers can be divided into two categories: customers who pay from 120 to 150 (Middle-class customers). customers who pay from 180 to 230 (High-class customers).
 
-weekly_sales & unemployment
+#weekly_sales & unemployment
 
 plt.figure(figsize = (14, 5))
 sns.scatterplot(data = df,
@@ -1014,7 +1014,7 @@ plt.xlabel('Unemployment Rate', size = 15)
 plt.ylabel('Sales', size = 15)
 plt.show()
 
-What are the total sales in each year?
+#What are the total sales in each year?
 
 df.groupby('year')['weekly_sales'].sum().sort_values(ascending = False)
 
@@ -1031,13 +1031,13 @@ plt.xlabel('Year', size = 13)
 plt.ylabel('Total Sales', size = 13)
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-Total sales in 2011 were the highest, with 2,448,200,007$.
+#Total sales in 2011 were the highest, with 2,448,200,007$.
 
-What are the total sales in each month?
+#What are the total sales in each month?
 
-df.groupby('month')['weekly_sales'].sum().sort_values(ascending = False)
+#df.groupby('month')['weekly_sales'].sum().sort_values(ascending = False)
 
 plt.figure(figsize = (14, 6))
 sns.barplot(data = df,
@@ -1064,11 +1064,11 @@ plt.xlabel('Month', size = 13)
 plt.ylabel('Total Sales', size = 13)
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-Total sales for all years in April are the highest from any month, with 650,000,977$.
+#Total sales for all years in April are the highest from any month, with 650,000,977$.
 
-What are the total sales in each year regarding the month?
+#What are the total sales in each year regarding the month?
 
 pd.pivot_table(data = df,
                index = 'year',
@@ -1091,13 +1091,13 @@ plt.ylabel('Total Sales', size = 18)
 
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-Total sales in December 2010, 2011 are the highest in the three years, where:
+#Total sales in December 2010, 2011 are the highest in the three years, where:
 
-In 2010, total sales in December were the highest. In 2011, total sales in April were the highest. In 2012, total sales in June were the highest.
+#In 2010, total sales in December were the highest. In 2011, total sales in April were the highest. In 2012, total sales in June were the highest.
 
-What are the total sales in each year regarding the day of the week
+#What are the total sales in each year regarding the day of the week
 
 pd.pivot_table(data = df,
                index = 'year',
@@ -1119,11 +1119,11 @@ plt.xlabel('Year', size = 15)
 plt.ylabel('Total Sales', size = 15)
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-Total weekly sales were the highest in the three years, where: In 2010, total sales on day 26 were the highest . In 2011, total sales on day 25 wednesdays were the highest . In 2012, total sales on day 6 were the highest .
+#Total weekly sales were the highest in the three years, where: In 2010, total sales on day 26 were the highest . In 2011, total sales on day 25 wednesdays were the highest . In 2012, total sales on day 6 were the highest .
 
-What happened to the total sales over time?
+#What happened to the total sales over time?
 
 years = ['2010', '2011', '2012']
 colors = ['red', 'black', 'blue']
