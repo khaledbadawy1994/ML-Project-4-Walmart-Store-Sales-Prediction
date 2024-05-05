@@ -506,7 +506,7 @@ plt.title('Year-Wise Sales')
 
 plt.show()
 
-Store number 4 and 20 have highest weekly sales.
+#Store number 4 and 20 have highest weekly sales.
 
 plt.figure(figsize=(7,4))
 
@@ -638,13 +638,13 @@ for i in ['weekly_sales','temperature', 'fuel_price','cpi', 'unemployment','year
             sns.kdeplot(x = df2[i])
             plt.xlabel(i)
 
-** Top 15 Cities w.r.t Sales**
+#** Top 15 Cities w.r.t Sales**
 
 df.hist(figsize=(40,20))
 
-Inference :
+#Inference :
 
-the number of transactions occurred almost evenly across various stores and years. The distribution of weekly_sales right-skewed. The distribution of temperature is approximately normal,a little bit left-skewed. The distribution of fuel_price is bi-modal. CPI formed two clusters. = unemployment rate is near normally distributed.
+#the number of transactions occurred almost evenly across various stores and years. The distribution of weekly_sales right-skewed. The distribution of temperature is approximately normal,a little bit left-skewed. The distribution of fuel_price is bi-modal. CPI formed two clusters. = unemployment rate is near normally distributed.
 
 # Sales over months
 
@@ -661,9 +661,9 @@ annot.set_visible(False)
 
 plt.show()
 
-Inference : Sales grows in the month of :
+#Inference : Sales grows in the month of :
 
-November December
+#November December
 
 df2.head()
 
