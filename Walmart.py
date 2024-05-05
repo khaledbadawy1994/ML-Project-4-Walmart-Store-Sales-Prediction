@@ -1206,11 +1206,11 @@ plt.show()
 
 def plot_top_and_bottom_stores(df, col):
 
-    Plot the top and bottom 5 stores based on their average weekly sales.
+   # Plot the top and bottom 5 stores based on their average weekly sales.
 
-    Parameters:
-    df (pandas DataFrame): The dataframe containing the sales data.
-    col (str): The name of the column to group the data by.
+   # Parameters:
+   # df (pandas DataFrame): The dataframe containing the sales data.
+    #col (str): The name of the column to group the data by.
 
     # Group the data by the specified column and sort it by sales in descending order
     df = df.groupby(col).mean().sort_values(by='Weekly_Sales', ascending=False)
