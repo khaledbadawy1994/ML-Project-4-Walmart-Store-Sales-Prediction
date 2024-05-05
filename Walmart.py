@@ -1205,7 +1205,7 @@ Sales increases in ooctober november and december months in years 2010 and 2011
 Which stores had the highest and lowest average revenues over the years?
 
 def plot_top_and_bottom_stores(df, col):
-    """
+
     Plot the top and bottom 5 stores based on their average weekly sales.
 
     Parameters:
