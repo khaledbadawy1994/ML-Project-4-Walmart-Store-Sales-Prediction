@@ -1235,7 +1235,7 @@ def plot_top_and_bottom_stores(df, col):
     plt.title('Bottom 5 Stores by Average Sales')
     plt.ylabel('Average weekly sales (millions USD)')
     plt.show()
-** What happens to the fuel price rate over time?**
+#** What happens to the fuel price rate over time?**
 
 plt.figure(figsize = (18, 5))
 for i, year in enumerate(years):
@@ -1257,11 +1257,11 @@ plt.legend()
 # Show the plot
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-The fuel price increases over time in 2010 & 2012. The fuel price decreases over time in 2011.
+#The fuel price increases over time in 2010 & 2012. The fuel price decreases over time in 2011.
 
-How does non-holiday weekly sales compared to holiday weekly sales?
+#How does non-holiday weekly sales compared to holiday weekly sales?
 
 # filter out non-holiday and holiday weekly sales
 non_holiday_sales = df[df['holiday_flag'] == 0]
@@ -1275,7 +1275,7 @@ plt.xlabel('Week type')
 plt.title('Box plots of non-holiday and holiday weekly sales')
 plt.show()
 
-We can see that both holiday and non-holiday weekly sales have similar spread. However, the bigger sales happen during the holiday weeks.
+W#e can see that both holiday and non-holiday weekly sales have similar spread. However, the bigger sales happen during the holiday weeks.
 
 df.head()
 
