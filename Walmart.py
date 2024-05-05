@@ -414,7 +414,7 @@ plt.show()
 
 df.head(1)
 
-If the yearly sales show a seasonal trend, when and what could be the reason?
+#If the yearly sales show a seasonal trend, when and what could be the reason?
 
 sales_date = df[['year','weekly_sales']]
 sales_date.set_index('year',inplace=True)
@@ -423,25 +423,25 @@ sales_date.head()
 plt.figure(figsize=(20,5))
 sns.lineplot(data=sales_date,palette='tab20')
 
-Lets check the sales by holiday season.
+#Lets check the sales by holiday season.
 
 plt.figure(figsize=(20,5))
 sns.lineplot(data=df,x='year',y='holiday_flag')
 
-The sales increase on holidays
+#The sales increase on holidays
 
-Does temperature affect the weekly sales in any manner?
+#Does temperature affect the weekly sales in any manner?
 
 plt.figure(figsize=(20,5))
-#sns.lineplot(data=df,x='year',y='Weekly_Sales')
+sns.lineplot(data=df,x='year',y='Weekly_Sales')
 sns.lineplot(data=df,x='year',y='temperature')
 
 plt.figure(figsize=(20,5))
 sns.lineplot(data=sales_date,palette='tab20')
 
-The only noted effect that can be seen is again of the holiday season. Holiday season are marked with winters and snow, that increases the needed clothing and stuff. Other than this there is no such clear trend of shopping related with temprature.
+#The only noted effect that can be seen is again of the holiday season. Holiday season are marked with winters and snow, that increases the needed clothing and stuff. Other than this there is no such clear trend of shopping related with temprature.
 
-How is the Consumer Price index affecting the weekly sales of various stores?
+#How is the Consumer Price index affecting the weekly sales of various stores?
 
 df.head(1)
 
@@ -451,9 +451,9 @@ sns.lineplot(data=df,x='year',y='cpi',color='green')
 plt.figure(figsize=(20,5))
 sns.lineplot(data=sales_date)
 
-Although there is inflation over time represented by increasing CPI over the time period. There is no upward or downward trend followed by weekly sales.
+#Although there is inflation over time represented by increasing CPI over the time period. There is no upward or downward trend followed by weekly sales.
 
-Lets check the store with maximum average sales over the given period.
+#Lets check the store with maximum average sales over the given period.
 
 df.head(1)
 
@@ -470,15 +470,15 @@ sns.barplot(data=ave_sales,x=ave_sales.index,y='weekly_sales',palette='Dark2')
 
 ave_sales.sort_values('weekly_sales',ascending=False).head(5)
 
-Top performing 5 stores are --> store number 20, 4, 14, 13, 2
+#Top performing 5 stores are --> store number 20, 4, 14, 13, 2
 
-** The worst performing store, and how significant is the difference between the highest and lowest performing stores.**
+#** The worst performing store, and how significant is the difference between the highest and lowest performing stores.**
 
 ave_sales.sort_values('weekly_sales').head(5)
 
-Worst performing stores are 33, 44, 5, 36, 38.
+#Worst performing stores are 33, 44, 5, 36, 38.
 
-Significant difference in highest and lowest performing store.
+#Significant difference in highest and lowest performing store.
 
 ave_sales_2=pd.DataFrame(average_store_sales)
 
