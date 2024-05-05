@@ -1746,12 +1746,12 @@ rf_random = RandomizedSearchCV(estimator = rf,param_distributions = random_grid,
                n_iter = 100, cv = 5, verbose=2, random_state=35, n_jobs = -1)
 rf_random.fit(x_train, y_train)
 
-Getting the best parameters
+#Getting the best parameters
 
 print ('Random grid: ', random_grid, '\n')
 print ('Best Parameters: ', rf_random.best_params_, ' \n')
 
-Using the best parameters obtained in our model and getting the accuracy
+#Using the best parameters obtained in our model and getting the accuracy
 
 randmf = RandomForestRegressor(n_estimators = 100, min_samples_split = 2, min_samples_leaf= 1, max_features = 'auto', max_depth= 120, bootstrap=True)
 randmf.fit( x_train, y_train)
