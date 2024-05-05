@@ -121,11 +121,11 @@ df.shape # new data shape
 
 print(df.columns.to_list())
 
-Checking for top 10 largest Sales
+#Checking for top 10 largest Sales
 
 df[['store', 'weekly_sales', 'holiday_flag', 'temperature', 'fuel_price']].nlargest(10,'weekly_sales')
 
-Store 14 has the most weekly_sales, while store 20,10,13,4 have are in top 10 twice
+#Store 14 has the most weekly_sales, while store 20,10,13,4 have are in top 10 twice
 
 Convert the numerical columns to categorical
 
