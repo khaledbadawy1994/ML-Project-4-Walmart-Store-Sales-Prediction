@@ -155,7 +155,7 @@ df['holiday_flag'].value_counts()
 
 df.head()
 
-Stores with the Annual Sales
+#Stores with the Annual Sales
 
 # group the store number and year with the summation of the weekly sales and store it in new variable df1
 df1 = df.groupby(['store', 'year']).aggregate({
