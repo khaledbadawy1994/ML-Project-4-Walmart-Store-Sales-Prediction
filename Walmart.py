@@ -1200,9 +1200,9 @@ plt.title('Average Sales Trends for 2010, 2011 & 2012', fontdict ={'fontsize':16
 plt.legend()
 plt.show()
 
-Sales increases in ooctober november and december months in years 2010 and 2011
+#Sales increases in ooctober november and december months in years 2010 and 2011
 
-Which stores had the highest and lowest average revenues over the years?
+#Which stores had the highest and lowest average revenues over the years?
 
 def plot_top_and_bottom_stores(df, col):
 
