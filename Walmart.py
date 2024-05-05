@@ -1430,13 +1430,13 @@ df
 
 x = df.drop(['weekly_sales'],axis=1)
 y = df['weekly_sales']
-Standardising the Data
+#Standardising the Data
 
 # scale the features
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 x_scaled = scaler.fit_transform(x)
-Splitting into train test
+#Splitting into train test
 
 # Creating the test-train split
 
