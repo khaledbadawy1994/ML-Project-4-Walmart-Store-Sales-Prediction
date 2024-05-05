@@ -204,9 +204,9 @@ for i in ["weekly_sales","temperature","fuel_price","cpi","unemployment"]:
             sns.boxplot(df[i]);
             plt.xlabel(i);
 
-we can see here that 3 columns "Weekly sale" , "Temperature" and "Unemployment has outliers.
+#we can see here that 3 columns "Weekly sale" , "Temperature" and "Unemployment has outliers.
 
-Treating Outliers
+#Treating Outliers
 
 #treating outliers with the help of upper whisker and lower whisker.
 
@@ -219,8 +219,8 @@ def outlier_treatment():
         lw = x[0]-1.5*iqr
         df[i]  = np.where(df[i]>uw,uw,(np.where(df[i]<lw,lw,df[i])))
 
-outlier_treatment()
-Checking Outliers In features after treatment
+#outlier_treatment()
+#Checking Outliers In features after treatment
 
 pno = 1
 plt.figure(figsize=(15,10))
@@ -319,14 +319,14 @@ df.shape
 
 df[df.duplicated()]
 
-*Univariant ,bivariante Analysis and data correlation *
+#*Univariant ,bivariante Analysis and data correlation *
 
 # Plot weekly sales distribution
 sns.histplot(df['weekly_sales'], kde=True)
 plt.title('Weekly Sales Distribution')
 plt.show()
 
-It's an exponential distribution. We should use log function on Weekly Sales. Also, in this section, we extract the Feature of the data to introduce to the algorithm.
+#It's an exponential distribution. We should use log function on Weekly Sales. Also, in this section, we extract the Feature of the data to introduce to the algorithm.
 
 ### Plot log of the target of samples ('Weekly_Sales' column) for finding distribution
 plt.figure(figsize=(20,12))
