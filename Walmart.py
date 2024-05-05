@@ -91,7 +91,7 @@ for i in range(df[features].shape[1]):
 
 print('\n\033[1mInference:\033[0m The Datset has {} numerical & {} categorical features.'.format(len(nf),len(cf)))
 
-Inference: The Datset has 6 numerical & 8 categorical features.
+#Inference: The Datset has 6 numerical & 8 categorical features.
 
 #Checking the stats of all the columns
 
