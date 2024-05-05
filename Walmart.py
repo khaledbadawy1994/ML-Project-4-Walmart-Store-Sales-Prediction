@@ -403,7 +403,7 @@ lowestSalesStore = totalSalesByStore.idxmin()
 lowestSalesValue = totalSalesByStore.min()
 print(f"Lowest Sales Store : {lowestSalesStore}, Total Sales: ${lowestSalesValue:,.0f}")
 
-Highest Sales Store: 20, Total Sales: 299,066,335LowestSalesStore:33,TotalSales:37,160,222
+#Highest Sales Store: 20, Total Sales: 299,066,335LowestSalesStore:33,TotalSales:37,160,222
 
 correlationMap = df.select_dtypes(include = ['number']).corr()
 
