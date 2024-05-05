@@ -1148,11 +1148,11 @@ plt.legend()
 # Show the plot
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-Sales are similar in most months, but they increased at the end of 2010 and 2011 and decreased at the end of 2012.
+#Sales are similar in most months, but they increased at the end of 2010 and 2011 and decreased at the end of 2012.
 
-What happens to the unemployment rate over time?
+#What happens to the unemployment rate over time?
 
 plt.figure(figsize = (18, 5))
 for i, year in enumerate(years):
@@ -1174,11 +1174,11 @@ plt.legend()
 # Show the plot
 plt.show()
 
-Conclusion:
+#Conclusion:
 
-The unemployment rate decreases over time.
+#The unemployment rate decreases over time.
 
-Are there any seasonality trends in the dataset
+#Are there any seasonality trends in the dataset
 
 # create the pivot table
 pivot_table = df.pivot_table(index='month', columns='year', values='weekly_sales')
